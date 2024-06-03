@@ -1,0 +1,46 @@
+tag:
+- name: parent
+  no_index: false
+  no_stem: false
+  sortable: true
+  weight: 1
+  withsuffixtrie: true
+- name: article_id
+  no_index: false
+  no_stem: false
+  sortable: true
+  weight: 1
+  withsuffixtrie: true
+- name: chunk_index
+  no_index: true
+  no_stem: true
+  sortable: false
+  weight: 0
+  withsuffixtrie: false
+text:
+- name: content
+  no_index: false
+  no_stem: false
+  sortable: false
+  weight: 1
+  withsuffixtrie: false
+- name: pre_chunk
+  no_index: true
+  no_stem: true
+  sortable: false
+  weight: 0
+  withsuffixtrie: false
+- name: post_chunk
+  no_index: false
+  no_stem: true
+  sortable: false
+  weight: 0
+  withsuffixtrie: false
+vector:
+- algorithm: FLAT
+  block_size: 1000
+  datatype: FLOAT32
+  dims: 1536
+  distance_metric: COSINE
+  initial_cap: 20000
+  name: content_vector

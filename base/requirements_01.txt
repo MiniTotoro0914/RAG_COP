@@ -1,0 +1,19 @@
+# langchain
+# langchain-core
+# langchain-openai
+# langchain-community
+# langchain_experimental
+# docx2txt
+# loguru
+# redis
+# openai
+
+langchain==0.1.9
+langchain-community==0.0.24
+langchain-core==0.1.27
+langchain-openai==0.0.8
+langchain_experimental
+redis==5.0.1
+docx2txt==0.8
+loguru==0.7.2
+gensim
