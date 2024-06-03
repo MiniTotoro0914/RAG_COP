@@ -1,20 +1,20 @@
 version: '3'
 
 services:
-  redis:
-    image: "redis:latest"
-    container_name: "local-redis-server"
+  redis2:
+    image: redis/redis-stack-server
+    container_name: local-redis-server
     ports:
-      - "6380:6380"
+       - "6379:6379"
 
   app:
     build: .
-    container_name: "local-redis-py-app"
+    container_name: local-redis-py-app
     volumes:
       - ./base:/app/base
       - ./data:/app/data
     working_dir: /app/base
     depends_on:
       - redis
-    environment:
-      - REDIS_URL=redis://redis:6380/0
+    # environment:
+    #   - REDIS_URL=redis://redis:6379/0
